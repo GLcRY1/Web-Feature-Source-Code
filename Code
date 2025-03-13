@@ -5,10 +5,6 @@
  font-size: ;
  margin-top: 20px;
 }
-#agenda {
- font-size: ;
- margin-top: 20px;
-}
 .clock {
  font-size: 30px;
  font-weight: bold;
@@ -74,9 +70,6 @@ button:hover {
  <div id="calendar"></div>
  </div><br />
  <div id="container">
- <div id="agenda"></div>
- </div><br />
- <div id="container">
  <h2>Guess the Number 1 - 100</h2>
  <p>Enter your guess:</p>
  <input id="guess" max="100" min="1" type="number" />
@@ -102,38 +95,12 @@ async function getHijriDate(day, month, year) {
  let data = await response.json();
  return data.data.hijri;
 }
-function getFastingSchedule(hijriDay, hijriMonth) {
- const fastingDays = {
- "Ramadan": "Puasa Wajib Ramadan",
- "Muharram":{
-  9: "Puasa Tasu'a (9 Muharram)",
-  10: "Puasa Asyura (10 Muharram)"
- },
- "Shawwal": "Puasa Syawal (6 hari setelah Idul Fitri)",
- "Dhul-Hijjah": {
-  8: "Puasa Tarwiyah (8 Dzulhijjah)",
-  9: "Puasa Arafah (9 Dzulhijjah)"
- }
- };
-
-if (fastingDays[hijriMonth]) {
- if (typeof fastingDays[hijriMonth] === 'string') {
-  return fastingDays[hijriMonth];
- } else if (fastingDays[hijriMonth][hijriDay]) {
-  return fastingDays[hijriMonth][hijriDay];
- }
-}
-return "Jadwal";
-}
 async function displayCalendar() {
  let { day, month, year } = getCurrentDate();
  let hijri = await getHijriDate(day, month, year);
  document.getElementById("calendar").innerHTML = `
   <p>Masehi: ${day}-${month}-${year}</p>
   <p>Hijriah: ${hijri.day}-${hijri.month.en}-${hijri.year}</p>
- `;
- document.getElementById("agenda").innerHTML = `
-  <p>${getFastingSchedule(parseInt(hijri.day), hijri.month.en)}</p>
  `;
 }
 displayCalendar();
