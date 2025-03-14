@@ -136,7 +136,7 @@ async function getHijriDate(day, month, year) {
 }
 async function displayCalendar() {
  let { day, month, year } = getCurrentDate();
- let hijri = await getHijriDate(day, new Date().getMonth(), year);
+ let hijri = await getHijriDate(day, new Date().getMonth() + 1, year);
  document.getElementById("calendar").innerHTML = `
   <p>Masehi: ${day} ${month} ${year}</p>
   <p>Hijriah: ${hijri.day}-${hijri.month.en}-${hijri.year}</p>
