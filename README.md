@@ -4,4 +4,4 @@
 <li><b>Calendar Source Code</b>: Display calendar and date.</li>
 <li><b>Prayer Times Source Code</b>: Display daily prayer times based on user location.</li>
 <li><b>Guessing Game Source Code</b>: Guess numbers randomly selected by the system</li>
-<b><a href="https://ut6hrb.mimo.run/index.html">Preview: https://ut6hrb.mimo.run/index.html</a></b>
+<b><a>Preview: https://ut6hrb.mimo.run/index.html</a></b>
