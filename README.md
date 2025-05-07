@@ -9,10 +9,3 @@
 <li><b>Prayer Times Source Code</b>: Display daily prayer times based on user location.</li>
 <li><b>Guessing Game Source Code</b>: Guess numbers randomly selected by the system</li>
 </body>
-<style>
-body { 
- color: lightgray; 
- font-weight: bold; 
- font-family: "Montserrat"; 
-} b { color: white; }
-</style>
