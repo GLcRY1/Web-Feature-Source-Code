@@ -1,7 +1,6 @@
 <h2>Features Function</h2>
-<body style="color: lightgray; font-weight: bold;">
+
 <li><b>Digital Clock Source Code</b>: Displays a digital clock that updates in real-time.</li>
 <li><b>Calendar Source Code</b>: Display calendar and date.</li>
 <li><b>Prayer Times Source Code</b>: Display daily prayer times based on user location.</li>
 <li><b>Guessing Game Source Code</b>: Guess numbers randomly selected by the system</li>
-</body>
